@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>タイプ相性道場ver6.0</title>
+    <link href="../_common/images/favicon.ico" rel="shortcut icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500"
+      rel="stylesheet"
+    />
+    <link href="../_common/css/style.css" rel="stylesheet" />
+    <link href="css/style-6.css" rel="stylesheet" />
+    <style>
+      .selection {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .selection li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>タイプ相性道場</h1>
+        <h2>バトルを有利に進めよう！</h2>
+      </div>
+      <!-- /.container -->
+    </header>
+    <main>
+      <div class="container" style="height: 850px">
+        <section>
+          <section id="main1">
+            <h2>ルール説明</h2>
+            <ul>
+              <li>相手のタイプの弱点となるタイプで攻撃しよう！</li>
+              <li>すべての弱点を選ぶと1点！</li>
+              <li>ミスは1問につき3回まで！</li>
+              <li>ぜんぶで3問あるよ！</li>
+            </ul>
+            <input id="start" type="button" value="始める" />
+            <a href="index-4.html" style="float: right">ver.4.0</a>
+          </section>
+          <!-- "始める"押したら表示切り替え -->
+          <section id="main2">
+            <h2>第<span id="number"></span>問</h2>
+            <div class="question">
+              <p>
+                相手のタイプ:<span
+                  ><ul class="type-list" id="condition"></ul
+                ></span>
+              </p>
+            </div>
+            <p>弱点をすべて選ぼう！<span id="counter"></span></p>
+            <p>ミス:<span id="miss-counter"></span></p>
+            <p class="typing" id="output1"></p>
+            <ul class="selection" id="selection">
+              <li class="normal" id="normal">ノーマル</li>
+              <li class="fire" id="fire">ほのお</li>
+              <li class="water" id="water">みず</li>
+              <li class="electric" id="electric">でんき</li>
+              <li class="grass" id="grass">くさ</li>
+              <li class="ice" id="ice">こおり</li>
+              <li class="fighting" id="fighting">かくとう</li>
+              <li class="poison" id="poison">どく</li>
+              <li class="ground" id="ground">じめん</li>
+              <li class="flying" id="flying">ひこう</li>
+              <li class="psychic" id="psychic">エスパー</li>
+              <li class="bug" id="bug">むし</li>
+              <li class="rock" id="rock">いわ</li>
+              <li class="ghost" id="ghost">ゴースト</li>
+              <li class="dragon" id="dragon">ドラゴン</li>
+              <li class="dark" id="dark">あく</li>
+              <li class="steel" id="steel">はがね</li>
+              <li class="fairy" id="fairy">フェアリー</li>
+            </ul>
+            <div class="answer">
+              <p id="output2">
+                <span><ul id="answer" class="type-list"></ul></span>
+              </p>
+            </div>
+            <input id="next" type="button" value="次へ" />
+          </section>
+          <!-- クイズ終了したら表示切り替え -->
+          <section id="main3">
+            <h2>結果発表</h2>
+            <table border="2">
+              <tr>
+                <th>正解</th>
+                <th>パーフェクト</th>
+              </tr>
+              <tr>
+                <td id="score"></td>
+                <td id="perfect"></td>
+              </tr>
+            </table>
+            <br />
+            <p id="cmnt" class="typing"></p>
+            <input id="retry" type="button" value="もう一度" />
+          </section>
+        </section>
+      </div>
+      <!-- /.container -->
+    </main>
+    <footer>
+      <div class="container">
+        <p>JavaScript Samples</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <script src="script-6.js"></script>
+  </body>
+</html>
